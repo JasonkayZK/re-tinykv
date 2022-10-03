@@ -1,11 +1,11 @@
-package re_tinykv
+package main
 
 import (
 	"fmt"
-	"github.com/JasonkayZK/re-tinykv/proto/pkg/hello"
+	hello "github.com/JasonkayZK/re-tinykv/proto/pkg/hello"
 )
 
 func main() {
 	req := hello.HelloRequest{}
-	fmt.Println(req)
+	fmt.Println(req.String())
 }

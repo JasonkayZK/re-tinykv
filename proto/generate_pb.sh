@@ -10,7 +10,6 @@ if [ -z "$(go env GOPATH)" ]; then
 fi
 
 GOPATH=$(go env GOPATH)
-GO_PREFIX_PATH=github.com/JasonkayZK/re-tinykv/proto/pkg
 PATH=$(pwd)/tools/bin:$GOPATH/bin:$PATH
 export PATH
 
@@ -24,9 +23,9 @@ function collect() {
   base_name=$(basename "$file" ".proto")
   mkdir -p ../pkg/"$base_name"
   if [ -z "$GO_OUT_M" ]; then
-    GO_OUT_M="M$file=$GO_PREFIX_PATH/$base_name"
+    GO_OUT_M="M$file=/"
   else
-    GO_OUT_M="$GO_OUT_M,M$file=$GO_PREFIX_PATH/$base_name"
+    GO_OUT_M="$GO_OUT_M,M$file=/"
   fi
 }
 

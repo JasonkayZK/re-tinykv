@@ -1,14 +1,12 @@
 syntax = "proto3";
 package hello;
 
+option go_package = "github.com/JasonkayZK/re-tinykv/proto/pkg";
+
 service HelloService {
   rpc Hello(HelloRequest) returns (HelloResponse) {}
 }
 
-message HelloRequest {
+message HelloRequest {}
 
-}
-
-message HelloResponse{
-
-}
+message HelloResponse{}

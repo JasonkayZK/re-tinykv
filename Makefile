@@ -21,6 +21,5 @@ PACKAGES            := $$($(PACKAGE_LIST))
 .PHONY: proto
 
 proto:
-	mkdir -p $(CURDIR)/bin
 	(cd proto && ./generate_pb.sh)
 	GO111MODULE=on go build ./proto/pkg/...
