@@ -21,5 +21,5 @@ PACKAGES            := $$($(PACKAGE_LIST))
 .PHONY: proto
 
 proto:
-	(cd proto && ./generate_pb.sh)
+	(cd proto && ./generate_go.sh)
 	GO111MODULE=on go build ./proto/pkg/...

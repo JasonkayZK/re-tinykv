@@ -1,10 +1,8 @@
 module github.com/JasonkayZK/re-tinykv/proto/_tools
 
-require github.com/golang/protobuf v1.5.2
-
 require (
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
-	google.golang.org/protobuf v1.26.0 // indirect
+	github.com/gogo/protobuf v1.3.2
+	golang.org/x/tools v0.0.0-20210106214847-113979e3529a
 )
 
-go 1.18
+go 1.13

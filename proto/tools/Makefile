@@ -1,4 +1,7 @@
-all: bin/protoc-gen-go
+all: bin/goimports bin/protoc-gen-gofast
 
-bin/protoc-gen-go:
-	go build -o $@ github.com/golang/protobuf/protoc-gen-go
+bin/goimports:
+	go build -o $@ golang.org/x/tools/cmd/goimports
+
+bin/protoc-gen-gofast:
+	go build -o $@ github.com/gogo/protobuf/protoc-gen-gofast

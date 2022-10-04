@@ -1,7 +1,8 @@
-//go:build modguard
+// +build modguard
 
 package tools
 
 import (
-	_ "github.com/golang/protobuf/protoc-gen-go"
+	_ "github.com/gogo/protobuf/protoc-gen-gofast"
+	_ "golang.org/x/tools/cmd/goimports"
 )
